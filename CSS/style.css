@@ -14,7 +14,9 @@
 
 /* header */
 header{
+    position: fixed;
     border-bottom: 1px solid lightgray;
+    width: 100%;
 }
 
 #header{
@@ -33,4 +35,35 @@ header{
 
 #header p{
     user-select: none;
+}
+
+/* ハンバーガーメニュー */
+/* 共通 */
+.menu{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: all .5s;
+}
+
+.menu span{
+    background-color: black;
+    margin: 5px;
+    width: 2rem;
+    height: 2px;
+    transition: all .5s;
+}
+
+/* 開いているとき */
+#open-menu span:nth-child(1){
+    rotate: 45deg;
+    translate: 0 10px;
+}
+#open-menu span:nth-child(2){
+    opacity: 0;
+    margin: 0;
+}
+#open-menu span:nth-child(3){
+    rotate: -45deg;
+    translate: 0 -4px;
 }
