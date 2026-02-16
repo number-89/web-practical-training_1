@@ -44,6 +44,7 @@ header{
     display: flex;
     flex-direction: column;
     transition: all .5s;
+    z-index: 100;
 }
 
 .menu span{
@@ -52,6 +53,16 @@ header{
     width: 2rem;
     height: 2px;
     transition: all .5s;
+}
+
+#blackout{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: .5;
+    transition: all .5s;
+    visibility: hidden;
+    z-index: 5;
 }
 
 /* 開いているとき */
