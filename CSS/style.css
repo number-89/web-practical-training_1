@@ -1,6 +1,12 @@
 @charset "utf-8";
 
 /* 全体 */
+.zen-kurenaido-regular {
+    font-family: "Zen Kurenaido", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .wrapper{
     max-width: 70%;
     margin: 0 auto;
