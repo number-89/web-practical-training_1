@@ -1,1 +1,26 @@
 @charset "utf-8";
+
+/* 全体 */
+.wrapper{
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+/* header */
+header{
+    border-bottom: 1px solid lightgray;
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    width: 100%;
+    font-size: 2rem;
+}
+
+#header a{
+    text-decoration: none;
+    color: black;
+}
