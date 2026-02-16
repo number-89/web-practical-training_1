@@ -30,3 +30,7 @@ header{
     text-decoration: none;
     color: black;
 }
+
+#header p{
+    user-select: none;
+}
