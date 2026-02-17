@@ -28,13 +28,35 @@ header{
     font-size: 2rem;
 }
 
-#header a{
+#header-logo{
     text-decoration: none;
     color: black;
+    position: relative;
+    user-select: none;
+    transition: all .5s;
 }
 
-#header p{
-    user-select: none;
+#header-logo:hover{
+    transition: all 1s;
+    letter-spacing: .1em;
+}
+
+/* ボタンを光らせる */
+#logo-shine{
+    content: "";
+    position: fixed;
+
+    background-color: black;
+    width: 0rem;
+    height: 3rem;
+    overflow: hidden;
+    opacity: .5;
+}
+
+#header-logo:hover #logo-shine{
+    transition: all .25s;
+    width: 6rem;
+    background-color: white;
 }
 
 /* ----------ハンバーガーメニュー---------- */
@@ -46,17 +68,25 @@ header{
     right: 1rem;
     margin-top: .5rem;
     height: 2.5rem;
+    width: 2.5rem;
     transition: all .5s;
     z-index: 100;
+    border-radius: 50%;
 }
 
 .menu span{
     background-color: black;
-    margin: 5px;
+    margin: auto auto;
     width: 2rem;
     height: 2px;
     transition: all .5s;
     border-radius: 9999px;
+}
+
+.menu:hover{
+    cursor: pointer;
+    background-color: lightgray;
+    border-radius: 5%;
 }
 
 #blackout{
@@ -72,7 +102,7 @@ header{
 /* 開いているとき */
 #open-menu span:nth-child(1){
     rotate: 45deg;
-    translate: 0 10px;
+    translate: 0 10.5px;
 }
 #open-menu span:nth-child(2){
     opacity: 0;
@@ -80,5 +110,5 @@ header{
 }
 #open-menu span:nth-child(3){
     rotate: -45deg;
-    translate: 0 -4px;
+    translate: 0 -10.5px;
 }
