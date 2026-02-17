@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/* 全体 */
+/* ----------全体---------- */
 .zen-kurenaido-regular {
     font-family: "Zen Kurenaido", sans-serif;
     font-weight: 400;
@@ -12,7 +12,7 @@
     margin: 0 auto;
 }
 
-/* header */
+/* ----------header---------- */
 header{
     position: fixed;
     border-bottom: 1px solid lightgray;
@@ -37,13 +37,15 @@ header{
     user-select: none;
 }
 
-/* ハンバーガーメニュー */
+/* ----------ハンバーガーメニュー---------- */
 /* 共通 */
 .menu{
-    position: relative;
+    position: fixed;
     display: flex;
     flex-direction: column;
     transition: all .5s;
+    right: 1rem;
+    margin-top: .5rem;
     z-index: 100;
 }
 
@@ -56,11 +58,11 @@ header{
 }
 
 #blackout{
+    position: fixed;
     width: 100vw;
     height: 100vh;
     background-color: black;
     opacity: .5;
-    transition: all .5s;
     visibility: hidden;
     z-index: 5;
 }
