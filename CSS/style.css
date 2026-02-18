@@ -46,7 +46,7 @@ header{
     content: "";
     position: fixed;
 
-    background-color: black;
+    background-color: white;
     width: 0rem;
     height: 3rem;
     overflow: hidden;
@@ -54,9 +54,10 @@ header{
 }
 
 #header-logo:hover #logo-shine{
-    transition: all .25s;
+    transition: all 1.5s;
     width: 6rem;
-    background-color: white;
+    background-color: black;
+    opacity: 0;
 }
 
 /* ----------ハンバーガーメニュー---------- */
