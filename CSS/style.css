@@ -60,6 +60,14 @@ header{
     opacity: 0;
 }
 
+/* 画像 */
+header img{
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+    user-select: none;
+}
+
 /* ----------ハンバーガーメニュー---------- */
 /* 共通 */
 .menu{
