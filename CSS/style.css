@@ -17,6 +17,7 @@ header{
     position: fixed;
     border-bottom: 1px solid lightgray;
     width: 100%;
+    background-color: white;
 }
 
 #header{
@@ -58,14 +59,6 @@ header{
     width: 6rem;
     background-color: black;
     opacity: 0;
-}
-
-/* 画像 */
-header img{
-    width: 100%;
-    height: auto;
-    pointer-events: none;
-    user-select: none;
 }
 
 /* ----------ハンバーガーメニュー---------- */
@@ -120,4 +113,55 @@ header img{
 #open-menu span:nth-child(3){
     rotate: -45deg;
     translate: 0 -10.5px;
+}
+
+/* ----------main---------- */
+/* ページ上部の画像 */
+#top-image{
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+    user-select: none;
+    margin-top: 3rem;
+}
+
+/* セクションimg-text */
+#imgs-text{
+    position: relative;
+    margin-top: 5rem;
+    height: 100%;
+    width: 100%;
+}
+
+#imgs-text h1{
+    text-align: center;
+    width: 100%;
+}
+
+#carousel{
+    position: absolute;
+    margin-top: clamp(1rem, 10vw, 1.5rem);
+    width: 100%;
+    aspect-ratio: 2 / 1;
+}
+
+.carousel-content{
+    display: flex;
+    position: absolute;
+    container-type: inline;
+    background-color: lightgray;
+    width: 100%;
+}
+
+.carousel-content img{
+    width: 40%;
+    height: 40%;
+    padding: 1rem;
+    pointer-events: none;
+}
+
+#imgs-text p{
+    font-size: clamp(.1rem, 2vw, 1rem);
+    margin:clamp(.5rem, 2vh, 10rem) clamp(.5rem, 2vw, 10rem);
+    width: 60%;
 }
