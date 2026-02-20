@@ -62,8 +62,6 @@ carouselLeftArrow.onclick = carouselLeftArrowClicked;
 
 // 左矢印がクリックされたとき
 function carouselRightArrowClicked(){
-    console.log("carouselRightArrowClicked");
-
     currentImageIndex = carouselNextIndex(currentImageIndex);
     carouselChangeImages(currentImageIndex, "before");
     carouselChangeText(currentImageIndex, "before");
@@ -71,7 +69,6 @@ function carouselRightArrowClicked(){
 
 // 右矢印がクリックされたとき
 function carouselLeftArrowClicked(){
-    console.log("carouselLeftArrowClicked");
     currentImageIndex = carouselPrevIndex(currentImageIndex);
     carouselChangeImages(currentImageIndex, "after");
     carouselChangeText(currentImageIndex, "after")
