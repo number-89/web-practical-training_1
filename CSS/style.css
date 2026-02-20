@@ -117,6 +117,17 @@ header{
 }
 
 /* ----------main---------- */
+/* 全体 */
+.section-title{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.section{
+    margin: 5rem auto;
+}
+
 /* ページ上部の画像 */
 #top-image{
     width: 100%;
@@ -128,17 +139,11 @@ header{
 
 /* セクションimg-text */
 #imgs-text{
-    margin-top: 5rem;
     height: 100%;
     width: 100%;
 }
 
-#imgs-text h1{
-    text-align: center;
-    width: 100%;
-}
-
-/* カルーセル */
+/* ----------カルーセル---------- */
 /* 共通 */
 #carousel{
     position: relative;
@@ -155,8 +160,9 @@ header{
 
 /* 画像 */
 #carousel-img{
+    user-select: none;
     position: relative;
-    border: 1px solid black;
+    border: 1px solid gray;
     width: 35%;
     border-radius: 5px;
     margin: clamp(.1rem, 2vw, 1rem);
@@ -183,6 +189,7 @@ header{
     width: 100%;
     object-fit: cover;
     object-position: center bottom;
+    pointer-events: none;
 }
 
 #carousel-img li{
@@ -285,7 +292,7 @@ header{
 
 /* 左矢印 */
 #carousel-left-arrow{
-    background: linear-gradient(-90deg, rgba(0,0,0,0), rgb(0,0,0,.5), rgb(0,0,0,.7));
+    background: linear-gradient(to left, rgba(113, 113, 113, 0), rgb(113, 113, 113,.5), rgb(113, 113, 113,.7));
 }
 #carousel-left-arrow p{
     left:0;
@@ -294,7 +301,7 @@ header{
 
 /* 右矢印 */
 #carousel-right-arrow{
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgb(0,0,0,.5), rgb(0,0,0,.7));
+    background: linear-gradient(to right, rgba(113, 113, 113, 0), rgb(113, 113, 113,.5), rgb(113, 113, 113,.7));
 }
 #carousel-right-arrow p{
     right:0;
@@ -308,6 +315,7 @@ header{
     opacity: 0;
     width: 60%;
     gap: .5rem;
+    transition: all .2s;
 
     /* 左右中央揃え */
     left: 0;
@@ -328,4 +336,89 @@ header{
 
 #carousel-dots p:nth-child(1){
     background-color: black;
+}
+
+/* ----------gallery---------- */
+
+/* 画像 */
+#gallery-image-list{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1rem;
+}
+
+
+#gallery-image-list li{
+    position: relative;
+    width: clamp(5rem, 20vw, 20vw);
+    height: clamp(7rem, 22vw, 22vw);
+    background-color: white;
+    overflow: hidden;
+    border: 1px solid darkgray;
+    border-radius: 2%;
+    margin: 0 auto;
+}
+
+#gallery-image-list img{
+    position: absolute;
+    width: 102%;
+    height: 102%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    user-select: none;
+    transition-property: width;
+    transition-duration: .2s;
+}
+
+#gallery-image-list li:hover img{
+    cursor: pointer;
+    width: 120%;
+    transition-property: width;
+    transition-duration: .5s;
+}
+
+.image-bottom{
+    position: absolute;
+    width: 100%;
+    height: clamp(1rem, 2vw, 4rem);
+    bottom: 0;
+    background-color: lightgray;
+    transition-property: opacity, height;
+    transition-duration: .5s, .3s;
+}
+
+#gallery-image-list li:hover .image-bottom{
+    height: clamp(7rem, 22vw, 22vw);
+    opacity: 0;
+    transition-duration: 1s, .5s;
+    cursor: pointer;
+}
+
+/* text */
+#gallery-text{
+    display: block;
+    width: 25%;
+    border: 1px solid black;
+    text-align: center;
+    margin: 1rem auto;
+    border-radius: 9999px;
+    text-decoration: none;
+}
+
+#gallery-text p{
+    width: 100%;
+    padding: clamp(.1rem, .75vw, 2rem);
+    font-size: clamp(.5rem, 2vw, 2rem);
+    border-radius: 9999px;
+    color: black;
+    transition: all .25s;
+}
+
+#gallery-text:hover p{
+    background: rgb(0,0,0,.05);
+    transition: all .5s;
 }

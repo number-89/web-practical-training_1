@@ -121,8 +121,3 @@ function carouselChangeText(index, direction){
         carouselTextList[carouselNextIndex(index)].style.display = "none";
     }
 }
-
-const debug = document.querySelector("#debug");
-for(let i = 0; i < 100; i++){
-    debug.innerText += "debug\n";
-}

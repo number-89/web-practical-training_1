@@ -43,8 +43,8 @@
         <img id="top-image" src="images/それっぽい画像を挿入.jpg" alt="それっぽい画像">
 
         <!-- カルーセル -->
-        <section id="imgs-text" class="wrapper">
-            <h1>
+        <section id="imgs-text" class="wrapper section">
+            <h1 class="section-title">
                 それっぽいタイトルテキスト
             </h1>
             <div id="carousel">
@@ -53,9 +53,9 @@
                         <!-- img-list -->
                         <!-- 画像を増やしたい時はここに追加(増やしすぎると・がはみ出る) -->
                         <ol id="carousel-img-list">
-                            <li><img src="images/food_fruit_sandwich_ichigo.png"></li>
-                            <li><img src="images/pan_anko_donut.png"></li>
-                            <li><img src="images/sweets_daifuku_ichigo_shiroan.png"></li>
+                            <li><img src="images/food_fruit_sandwich_ichigo.png" alt=""></li>
+                            <li><img src="images/pan_anko_donut.png" alt=""></li>
+                            <li><img src="images/sweets_daifuku_ichigo_shiroan.png" alt=""></li>
                         </ol>
 
                         <!-- 画像切り替え -->
@@ -101,7 +101,44 @@
                 </div>
             </div>
         </section>
-        <div id="debug"></div>
+
+        <!-- gallery -->
+        <section id="gallery" class="wrapper section">
+            <h1 class="section-title">
+                それっぽいタイトルテキスト
+            </h1>
+            <div id="gallery-images">
+                <ul id="gallery-image-list">
+                    <li>
+                        <img src="images/food_fruit_sandwich_ichigo.png" alt="">
+                        <span class="image-bottom"></span>
+                    </li>
+                    <li>
+                        <img src="images/pan_anko_donut.png" alt="">
+                        <span class="image-bottom"></span>
+                    </li>
+                    <li>
+                        <img src="images/sweets_daifuku_ichigo_shiroan.png" alt="">
+                        <span class="image-bottom"></span>
+                    </li>
+                    <li>
+                        <img src="images/sweets_fruit_mitsumame.png" alt="">
+                        <span class="image-bottom"></span>
+                    </li>
+                    <li>
+                        <img src="images/sweets_goheimochi.png" alt="">
+                        <span class="image-bottom"></span>
+                    </li>
+                    <li>
+                        <img src="images/sweets_jelly_cup.png" alt="">
+                        <span class="image-bottom"></span>
+                    </li>
+                </ul>
+            </div>
+            <a href="#" id="gallery-text">
+                <p>Show more...</p>
+            </a>
+        </section>
     </main>
 </body>
 </html>
