@@ -19,13 +19,14 @@ header{
     width: 100%;
     background-color: white;
     z-index: 50;
+    top: 0;
 }
 
 #header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 3rem;
+    height: 3.2rem;
     width: 100%;
     font-size: 2rem;
 }
@@ -75,6 +76,7 @@ header{
     transition: all .5s;
     z-index: 550;
     border-radius: 50%;
+    top: 0;
 }
 
 .menu span{
@@ -148,6 +150,10 @@ header{
 
 /* ----------main---------- */
 /* 全体 */
+main{
+    margin-top: 3.2rem;
+}
+
 .section-title{
     text-align: center;
     width: 100%;
@@ -164,7 +170,6 @@ header{
     height: 100%;
     pointer-events: none;
     user-select: none;
-    margin-top: 3rem;
 }
 
 /* セクションimg-text */
