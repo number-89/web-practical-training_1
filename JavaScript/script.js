@@ -1,6 +1,55 @@
 // ----------all----------
 let windowY = 0;
 
+// ----------ヘッダー----------
+// windowが隠れているか
+let isHeaderHidden = false;
+
+// headerを取得
+const header = document.querySelector("#header").parentNode;
+const headerAnimeDuration = {duration:250,fill:"forwards"};
+
+ // mainを取得
+const main = document.querySelector("#main");
+
+window.addEventListener("scroll", () => {
+    let currentWindowY = window.scrollY;
+    // console.log(currentWindowY);
+    if(currentWindowY > windowY && !isHeaderHidden){
+        // 下スクロール
+        header.animate(
+            {
+                translate:"0 -3.2rem"
+            },
+            headerAnimeDuration
+        );
+        main.animate(
+            {
+                translate:"0 -3.2rem"
+            },
+            headerAnimeDuration
+        );
+        isHeaderHidden = true;
+    } else if(currentWindowY < windowY && isHeaderHidden) {
+        // 上スクロール
+        header.animate(
+            {
+                translate:0
+            },
+            headerAnimeDuration
+        );
+        main.animate(
+            {
+                translate:0
+            },
+            headerAnimeDuration
+        );
+        isHeaderHidden = false;
+    }
+
+    windowY = currentWindowY;
+});
+
 // ----------ハンバーガーメニュー----------
 const menu = document.querySelector(".menu");
 const menuSpan = document.querySelectorAll(".menu span");
@@ -23,7 +72,6 @@ menu.addEventListener("click", () => {
         });
     }
 });
-
 
 // ----------カルーセル----------
 // 画像とテキストの配列
@@ -126,52 +174,3 @@ function carouselChangeText(index, direction){
         carouselTextList[carouselNextIndex(index)].style.display = "none";
     }
 }
-
-// ----------ヘッダー----------
-// windowが隠れているか
-let isHeaderHidden = false;
-
-// headerを取得
-const header = document.querySelector("#header").parentNode;
-const headerAnimeDuration = {duration:250,fill:"forwards"};
-
- // mainを取得
-const main = document.querySelector("#main");
-
-window.addEventListener("scroll", () => {
-    let currentWindowY = window.scrollY;
-    // console.log(currentWindowY);
-    if(currentWindowY > windowY && !isHeaderHidden){
-        // 下スクロール
-        header.animate(
-            {
-                translate:"0 -3.2rem"
-            },
-            headerAnimeDuration
-        );
-        main.animate(
-            {
-                translate:"0 -3.2rem"
-            },
-            headerAnimeDuration
-        );
-        isHeaderHidden = true;
-    } else if(currentWindowY < windowY && isHeaderHidden) {
-        // 上スクロール
-        header.animate(
-            {
-                translate:0
-            },
-            headerAnimeDuration
-        );
-        main.animate(
-            {
-                translate:0
-            },
-            headerAnimeDuration
-        );
-        isHeaderHidden = false;
-    }
-
-    windowY = currentWindowY;
-})
