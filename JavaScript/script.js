@@ -16,34 +16,59 @@ window.addEventListener("scroll", () => {
     let currentWindowY = window.scrollY;
     // console.log(currentWindowY);
     if(currentWindowY > windowY && !isHeaderHidden){
-        // 下スクロール
+        // 下スクロールしたとき
+        // ヘッダーを非表示
         header.animate(
             {
                 translate:"0 -3.2rem"
             },
             headerAnimeDuration
         );
+        // headerとmainの隙間を埋める
         main.animate(
             {
                 translate:"0 -3.2rem"
             },
             headerAnimeDuration
+        );
+
+        menu.animate(
+            {
+                translate:[0, "0 -3.2rem", 0],
+                opacity:[1, 0, 1]
+            },
+            {
+                duration:250
+            }
         );
         isHeaderHidden = true;
     } else if(currentWindowY < windowY && isHeaderHidden) {
-        // 上スクロール
+        // 上スクロールしたとき
+        // ヘッダーを表示
         header.animate(
             {
                 translate:0
             },
             headerAnimeDuration
         );
+        // headerとmainの隙間を作る
         main.animate(
             {
                 translate:0
             },
             headerAnimeDuration
         );
+        // メニューを一瞬隠す
+        menu.animate(
+            {
+                translate:["0 -3.2rem", 0],
+                opacity:[1, 0, 1]
+            },
+            {
+                duration:250
+            }
+        );
+
         isHeaderHidden = false;
     }
 
