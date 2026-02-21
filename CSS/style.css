@@ -265,10 +265,11 @@ header{
 }
 
 #carousel-arrow p{
-    padding: .25rem .5rem;
+    padding: clamp(.05rem, 1vw, 1rem) clamp(.1rem, 1.25vw, 2rem);
     background-color: white;
     color: gray;
     font-weight: bold;
+    font-size: clamp(.05rem, 1vw, 1rem);
     border-radius: 5%;
     opacity: .3;
     cursor: pointer;
@@ -282,7 +283,7 @@ header{
 
 #carousel-right-arrow,
 #carousel-left-arrow{
-    width: 20%;
+    width: clamp(10%, 5vw, 30%);
     display: grid;
     place-items: center;
     color: white;
@@ -371,14 +372,15 @@ header{
     translate: -50% -50%;
     user-select: none;
     transition-property: width;
-    transition-duration: .2s;
+    transition-duration: .3s;
 }
 
 #gallery-image-list li:hover img{
     cursor: pointer;
     width: 120%;
     transition-property: width;
-    transition-duration: .5s;
+    transition-duration: .4s;
+    transition-timing-function: ease-out;
 }
 
 .image-bottom{
@@ -389,6 +391,7 @@ header{
     background-color: lightgray;
     transition-property: opacity, height;
     transition-duration: .5s, .3s;
+    transition-timing-function: ease-in;
 }
 
 #gallery-image-list li:hover .image-bottom{
@@ -421,4 +424,11 @@ header{
 #gallery-text:hover p{
     background: rgb(0,0,0,.05);
     transition: all .5s;
+}
+
+/* ----------footer---------- */
+footer{
+    padding: 1rem;
+    background-color: gray;
+    text-align: center;
 }
