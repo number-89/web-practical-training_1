@@ -73,7 +73,7 @@ header{
     height: 2.5rem;
     width: 2.5rem;
     transition: all .5s;
-    z-index: 100;
+    z-index: 550;
     border-radius: 50%;
 }
 
@@ -96,10 +96,40 @@ header{
     position: fixed;
     width: 100vw;
     height: 100vh;
+    visibility: hidden;
+    z-index: 500;
+}
+
+#blackout-background{
+    position: absolute;
     background-color: black;
     opacity: .5;
-    visibility: hidden;
-    z-index: 50;
+    height: 100%;
+    width: 100%;
+}
+
+#blackout ul{
+    position: absolute;
+    list-style: none;
+    margin-top: 2.75rem;
+}
+
+#blackout li{
+    margin: .75rem 1.5rem;
+}
+
+#blackout a{
+    color: black;
+    text-decoration: none;
+    user-select: none;
+    background-color: rgb(255,255,255, .8);
+    border-radius: 5px;
+    padding: 0 .25rem;
+}
+
+#blackout a:hover{
+    color: white;
+    background-color: transparent;
 }
 
 /* 開いているとき */
