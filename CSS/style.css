@@ -564,6 +564,10 @@ footer{
     list-style: none;
 }
 
+#qualification-story li{
+    display: none;
+}
+
 /* 閉じるマーク */
 #close-qualification-story{
     position: absolute;
