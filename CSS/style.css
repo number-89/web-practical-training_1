@@ -494,3 +494,17 @@ footer{
     background-color: gray;
     text-align: center;
 }
+
+/* ----------favorite---------- */
+#favorite img{
+    width: 30%;
+}
+
+.favorite-content{
+    margin-top: 5rem;
+}
+
+.favorite-img-text{
+    display: flex;
+    gap: 4rem;
+}
