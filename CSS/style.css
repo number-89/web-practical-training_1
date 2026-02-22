@@ -513,8 +513,9 @@ footer{
 
 /* ----------qualification---------- */
 #qualification-main{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
+    overflow: hidden;
 }
 
 /* list */
@@ -549,7 +550,7 @@ footer{
 
 /* story */
 #qualification-story{
-    position: absolute;
+    position: fixed;
     width: 40vw;
     height: calc(100vh - 5rem);
     background-color: white;
