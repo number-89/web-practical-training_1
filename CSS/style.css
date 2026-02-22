@@ -512,6 +512,11 @@ footer{
 }
 
 /* ----------qualification---------- */
+#qualification-main{
+    width: 100vw;
+    height: 100vh;
+}
+
 /* list */
 #qualification-list{
     list-style: none;
@@ -537,7 +542,7 @@ footer{
     text-decoration-line: underline;
 }
 
-.qualification-name{
+.qualification-name span{
     cursor: pointer;
     font-size: 1.5rem;
 }
@@ -556,6 +561,39 @@ footer{
 
 #qualification-story ol{
     list-style: none;
+}
+
+/* 閉じるマーク */
+#close-qualification-story{
+    position: absolute;
+    width: 3vw;
+    height: 3vw;
+    right: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+#close-qualification-story:hover{
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+#close-qualification-story span{
+    position: absolute;
+    width: 2.5vw;
+    height: 2px;
+    background-color: black;
+    border-radius: 5px;
+}
+
+#close-qualification-story span:nth-child(1){
+    translate: .25vw 1.5vw;
+    rotate: 45deg;
+}
+#close-qualification-story span:nth-child(2){
+    translate: .25vw 1.5vw;
+    rotate: -45deg;
 }
 
 /* footer */
