@@ -493,18 +493,20 @@ footer{
     padding: 1rem;
     background-color: gray;
     text-align: center;
+    width: 100%;
 }
 
 /* ----------favorite---------- */
-#favorite img{
-    width: 30%;
+#favorite{
+    height: 100%;
+    width: 100%;
 }
 
-.favorite-content{
-    margin-top: 5rem;
+.favorite-title{
+    font-size: clamp(.1rem, 3vw, 20rem);
 }
 
-.favorite-img-text{
-    display: flex;
-    gap: 4rem;
+#favorite-footer{
+    position: absolute;
+    bottom: 0;
 }

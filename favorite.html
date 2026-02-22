@@ -66,25 +66,64 @@
     </div>
 
     <main id="main">
-        <section id="favorite" class="wrapper">
-            <div id="favorite_scooter" class="favorite-content">
-                <h1>趣味１：原付ツーリング</h1>
-                <div class="favorite-img-text">
-                    <img src="images/scooters_nonum_small.jpg">
-                    <p>ほとんど毎日２時間程度原付に乗っています。</p>
-                </div>
-            </div>
-            <div id="favorite_bookstore" class="favorite-content">
-                <h1>趣味２：本屋さんに行くこと</h1>
-                <div class="favorite-img-text">
-                    <img src="images/food_fruit_sandwich_ichigo.png">
-                    <p>大きな本屋さんから街の小さな本屋さんまで、。</p>
+        <!-- カルーセル -->
+        <section id="favorite" class="wrapper section">
+            <h1 class="section-title">
+                それっぽいタイトルテキスト
+            </h1>
+            <div id="carousel">
+                <div id="carousel-content">
+                    <div id="carousel-img">
+                        <!-- img-list -->
+                        <!-- 画像を増やしたい時はここに追加(増やしすぎると・がはみ出る) -->
+                        <ol id="carousel-img-list">
+                            <li><img src="images/scooters_nonum_small.jpg"></li>
+                            <li><img src="images/food_fruit_sandwich_ichigo.png"></li>
+                        </ol>
+
+                        <!-- 画像切り替え -->
+                        <div id="carousel-change">
+                            <div id="carousel-arrow">
+                                <!-- 右矢印 -->
+                                <div id="carousel-left-arrow">
+                                    <p>＜</p>
+                                </div>
+            
+                                <!-- 左矢印 -->
+                                <div id="carousel-right-arrow">
+                                    <p>＞</p>
+                                </div>
+                            </div>
+
+                            <div id="carousel-dots">
+                                <!-- JavaScriptで・を追加 -->
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <!-- imgと連動するtext -->
+                    <!-- imgを追加したときはここにtextを追加 -->
+                    <ol id="carousel-text-list">
+                        <li>
+                            <h1 class="favorite-title">趣味１：原付ツーリング</h1>
+                            <p>
+                                ほとんど毎日２時間程度原付に乗っている。インドア派だったのに原付に乗るためだけに外に出るようになった。交差点直前で二段階右折禁止の標識を出すのは勘弁してほしい。
+                            </p>
+                        </li>
+                        <li>
+                            <h1 class="favorite-title">趣味２：本屋さんに行くこと</h1>
+                            <p>
+                                大きな本屋さんから街の小さな本屋さんまで、本屋さんを見つけたらとりあえず入る。最近、高校生の頃よく通っていた本屋さんが閉店してとっても悲しい。電子書籍にない魅力が紙書籍にあることを知ってほしい。
+                            </p>
+                        </li>
+                    </ol>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer id="favorite-footer">
         <p>&copy;2026 number-89</p>
     </footer>
 </body>
