@@ -556,7 +556,7 @@ footer{
     background-color: white;
     border-left: 1px solid lightgray;
     padding: 1rem;
-    right: 0;
+    right: -40vw;
     top: 3.2rem;
 }
 

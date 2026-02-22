@@ -28,7 +28,7 @@ const qualificationNameList = document.querySelectorAll(".qualification-name"); 
 const storyTextList = document.querySelectorAll("#qualification-story-text li p"); // 説明文のリスト
 let sideWindowWidth = sideWindow.clientWidth; // サイドメニューの横幅(px)
 
-let isWindowOpen = true;
+let isWindowOpen = false;
 closeBtn.onclick = sideWindowClose;
 
 // ウィンドウを閉じる
