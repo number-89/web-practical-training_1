@@ -577,6 +577,7 @@ footer{
     border-radius: 50%;
     cursor: pointer;
     transition: all .3s;
+    z-index: 100;
 }
 
 #close-qualification-story:hover{

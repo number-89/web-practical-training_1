@@ -30,7 +30,7 @@ menu.addEventListener("click", () => {
 // ----------説明文----------
 const sideWindow = document.querySelector("#qualification-story")  // サイドメニュー
 const closeBtn = document.querySelector("#close-qualification-story"); // ボタン
-const qualificationNameList = document.querySelectorAll(".qualification-name"); // 取得した資格のリスト
+const qualificationNameList = document.querySelectorAll(".qualification-name span"); // 取得した資格のリスト
 const storyTextList = document.querySelectorAll("#qualification-story-text li"); // 説明文のリスト
 let sideWindowWidth = sideWindow.clientWidth; // サイドメニューの横幅(px)
 
@@ -56,7 +56,9 @@ function sideWindowClose(){
         );
 
         // テキストを非表示にする
-        sideWindowTextNone();
+        setTimeout(() => {
+            sideWindowTextNone();
+        }, 250);
 
         isWindowOpen = false
     }
@@ -79,6 +81,7 @@ qualificationNameList.forEach((e, i) => {
             // サイドウィンドウを開く
             sideWindow.animate(
                 {
+                    opacity:[0, 1],
                     right:[`${-1 * (sideWindowWidth + 1)}px`, 0]
                 },
                 {
@@ -87,13 +90,35 @@ qualificationNameList.forEach((e, i) => {
                     easing:"ease-out"
                 }
             );
+
+            // テキストを表示
+            storyTextList[i].animate(
+                {
+                    opacity:[0, 1]
+                },
+                {
+                    duration:1,
+                    fill:"forwards"
+                }
+            );
         
             // クリックされたテキストに対応するテキストを表示
             isWindowOpen= true;
         } else {
             // 開いているとき
-
-
+            openSideWindowTextHidden();
+            sideWindowTextNone();
+            storyTextList[i].style.display = "block";
+            storyTextList[i].animate(
+                {
+                    opacity:[0, 1],
+                    translate:["0 10px", 0]
+                },
+                {
+                    duration:200,
+                    fill:"forwards"
+                }
+            );
         }
     });
 })
@@ -108,8 +133,22 @@ function fontWeightNormal(){
 // すべてのサイドウィンドウに表示されたテキストを非表示にする
 function sideWindowTextNone(){
     storyTextList.forEach((e) => {
-        setTimeout(() => {
-            e.style.display = "none"
-        }, 500)
+        e.style.display = "none"
+    })
+}
+
+// サイドウィンドウが開いているときのテキストアニメーション
+function openSideWindowTextHidden(){
+    storyTextList.forEach((e) => {
+        e.animate(
+            {
+                opacity:[1, 0],
+                translate:["0 10px", 0]
+            },
+            {
+                duration:200,
+                fill:"forwards"
+            }
+        );
     })
 }
