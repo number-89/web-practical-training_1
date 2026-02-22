@@ -7,7 +7,8 @@ let isHeaderHidden = false;
 
 // headerを取得
 const header = document.querySelector("#header").parentNode;
-const headerAnimeDuration = {duration:250,fill:"forwards"};
+const headerOpenAnimeDuration = {duration:250,fill:"forwards"};
+const headerCloseAnimeDuration = {duration:100,fill:"forwards",delay:200};
 
  // mainを取得
 const main = document.querySelector("#main");
@@ -22,52 +23,78 @@ window.addEventListener("scroll", () => {
             {
                 translate:"0 -3.2rem"
             },
-            headerAnimeDuration
+            headerOpenAnimeDuration
         );
         // headerとmainの隙間を埋める
         main.animate(
             {
                 translate:"0 -3.2rem"
             },
-            headerAnimeDuration
+            headerOpenAnimeDuration
+        );
+
+        // menuを一瞬隠す
+        menu.animate(
+            {
+                translate:[0, "0 -3.2rem", 0],
+                opacity:[1, 0, 0]
+            },
+            {
+                duration:250,
+                fill:"forwards"
+            }
         );
 
         menu.animate(
             {
-                translate:[0, "0 -3.2rem", 0],
-                opacity:[1, 0, 1]
+                opacity:[0, 1],
             },
             {
-                duration:250
+                duration:400,
+                fill:"forwards",
+                delay:300
             }
         );
         isHeaderHidden = true;
     } else if(currentWindowY < windowY && isHeaderHidden) {
         // 上スクロールしたとき
+        // メニューを一瞬隠す
+        menu.animate(
+            {
+                opacity:[1, 0]
+            },
+            {
+                duration:100,
+                fill:"forwards"
+            }
+        );
+        menu.animate(
+            {
+                translate:["0 -3.2rem", 0],
+                opacity:[0, 1]
+            },
+            {
+                duration:100,
+                fill:"forwards",
+                delay:200
+            }
+        );
+
         // ヘッダーを表示
         header.animate(
             {
                 translate:0
             },
-            headerAnimeDuration
+            headerCloseAnimeDuration
         );
         // headerとmainの隙間を作る
         main.animate(
             {
                 translate:0
             },
-            headerAnimeDuration
+            headerCloseAnimeDuration
         );
-        // メニューを一瞬隠す
-        menu.animate(
-            {
-                translate:["0 -3.2rem", 0],
-                opacity:[1, 0, 1]
-            },
-            {
-                duration:250
-            }
-        );
+
 
         isHeaderHidden = false;
     }
