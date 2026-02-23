@@ -780,4 +780,15 @@ main{
         left: calc((100% - 60vw) / 2);
         top: 65vw;
     }
+
+    /* qualification */
+    #qualification-story{
+        width: 100vw;
+        height: 50vw;
+        bottom: 0;
+        left: 0;
+        border-left: none;
+        border-top: 1px solid lightgray;
+        top: auto;
+    }
 }
