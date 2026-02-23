@@ -593,7 +593,7 @@ main{
 }
 
 /* text Show more... */
-#gallery-text{
+/* #gallery-text{
     display: block;
     width: 25%;
     border: 1px solid black;
@@ -615,7 +615,7 @@ main{
 #gallery-text:hover p{
     background: rgb(0,0,0,.05);
     transition: all .5s;
-}
+} */
 
 /* ----------favorite---------- */
 #favorite{
@@ -718,11 +718,25 @@ main{
     rotate: -45deg;
 }
 
-/* ----------special_skill---------- */
-#special_skill{
-    display: flex;
+/* ----------special-skill---------- */
+#special-skill-texts{
+    margin-top: 5rem;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: clamp(.1rem, 2vw, 5rem);
+    width: 100%;
+    height: auto;
+    /* background-color: aqua; */
 }
 
-#special_skill img{
-    width: 50%;
+#special-skill-texts img{
+    height: 100%;
+    width: 30vw;
+    float: left;
+}
+
+#special-skill-texts p{
+    padding: clamp(.1rem, .5vw, 5rem) clamp(.1rem, .25vw, 5rem);
+    margin-left: 1rem;
 }
