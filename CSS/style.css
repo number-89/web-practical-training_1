@@ -12,11 +12,6 @@
     margin: 0 auto;
 }
 
-.bottom-footer{
-    position: absolute;
-    bottom: 0;
-}
-
 /* ----------header---------- */
 header{
     position: fixed;
@@ -66,6 +61,21 @@ header{
     width: 6rem;
     background-color: black;
     opacity: 0;
+}
+
+/* ----------footer---------- */
+/* 普通のfooter */
+footer{
+    padding: 1rem;
+    background-color: gray;
+    text-align: center;
+    width: 100%;
+}
+
+/* 固定footer */
+.bottom-footer{
+    position: absolute;
+    bottom: 0;
 }
 
 /* ----------ハンバーガーメニュー---------- */
@@ -378,6 +388,120 @@ main{
     background-color: black;
 }
 
+
+/* ----------programming---------- */
+/* 全体 */
+#PG-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    transition: all .3s;
+}
+
+.open-PG-modal{
+    opacity: 1;
+    visibility: visible;
+}
+
+.close-PG-modal{
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* 背景 */
+#modal-blackout{
+    position: absolute;
+    opacity: .8;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+}
+
+/* 中身 */
+#modal-content{
+    position: relative;
+    /* display: flex; */
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin: 5rem auto;
+    padding: 2rem;
+    width: 100%;
+    height: 70%;
+}
+
+#programming-images{
+    display: block;
+    width: clamp(1rem, 20vw, 20rem);
+    padding: 2vw;
+    text-align: center;
+    float: left;
+}
+
+#programming-images img{
+    width: 100%;
+}
+
+.alternative{
+    font-size: clamp(.1rem, 1.25vw, 3rem);
+}
+
+.alternative a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.alternative a:hover{
+    text-decoration: underline;
+}
+
+#programming-text{
+    /* 閉じるボタンの隙間を空ける */
+    padding-right: clamp(1rem, 3vw, 3rem);
+    width: 100%;
+    height: 100%;
+    font-size: clamp(.1rem, 2.25vw, 3rem);
+}
+
+/* 閉じるマーク */
+#close-modal-btn{
+    position: absolute;
+    width: 3vw;
+    height: 3vw;
+    right: 1rem; /* clamp */
+    top: 1rem; /* clamp */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .3s;
+    z-index: 100;
+}
+
+#close-modal-btn:hover{
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+#close-modal-btn span{
+    position: absolute;
+    width: 2.5vw;
+    height: 2px;
+    background-color: black;
+    border-radius: 5px;
+}
+
+#close-modal-btn span:nth-child(1){
+    translate: .25vw 1.5vw;
+    rotate: 45deg;
+}
+#close-modal-btn span:nth-child(2){
+    translate: .25vw 1.5vw;
+    rotate: -45deg;
+}
+
 /* ----------gallery---------- */
 
 /* 画像 */
@@ -493,14 +617,6 @@ main{
     transition: all .5s;
 }
 
-/* ----------footer---------- */
-footer{
-    padding: 1rem;
-    background-color: gray;
-    text-align: center;
-    width: 100%;
-}
-
 /* ----------favorite---------- */
 #favorite{
     height: 100%;
@@ -509,38 +625,6 @@ footer{
 
 .favorite-title{
     font-size: clamp(.1rem, 3vw, 20rem);
-}
-
-/* ----------programming---------- */
-#programming-content{
-    display: flex;
-    /* background-color: blue; */
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    margin: 5rem 0;
-}
-
-#programming-images{
-    padding: 2rem;
-    text-align: center;
-}
-.alternative{
-    font-size: small;
-}
-
-.alternative a{
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.alternative a:hover{
-    text-decoration: underline;
-}
-
-#programming-text{
-    padding-top: 2rem;
-    padding-right: 5rem;
 }
 
 /* ----------qualification---------- */

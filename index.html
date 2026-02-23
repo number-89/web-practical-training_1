@@ -11,6 +11,8 @@
 
     <!-- JavaScript -->
     <script src="JavaScript/script.js" defer></script>
+    <script src="JavaScript/carousel.js" defer></script>
+    <script src="JavaScript/pg_modal.js" defer></script>
 
     <!-- GoogleFont -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,6 +66,36 @@
             </li>
         </ul>
     </div>
+
+        <!-- programming用モーダルウィンドウ -->
+        <div id="PG-modal" class="close-PG-modal">
+            <!-- 画面が暗くなる -->
+            <div id="modal-blackout"></div>
+
+            <!-- 中身 -->
+            <div id="modal-content" class="wrapper">
+                <!-- 画像 -->
+                <div id="programming-images">
+                    <img src="images/RankS_250.png" alt="Sの画像">
+                    <p class="alternative">
+                        <a href="https://paiza.jp/mypage">paiza</a> Rank S(MAX Rate 1740)
+                    </p>
+                </div>
+
+                <!-- テキスト -->
+                <p id="programming-text">
+                    ゲームが作りたくてプログラミングを始めたが、今ではプログラミングをすることが目的になってゲームへの興味が薄れてしまった。
+                    モノ作りが好きで、何かを作り始めると止まらない。分からない事があったら先生に聞いたりAIを活用していたが、
+                    最近はAIに答えを聞くと負けた気がするので、使うときは自分で問題を解決した後にしてしまう。本当に時間の無駄だと思う。
+                </p>
+
+                <!-- モーダルウィンドウを閉じるX -->
+                <div id="close-modal-btn">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
     
     <main id="main">
         <img id="top-image" src="images/scooters_nonum.jpg" alt="それっぽい画像">
@@ -159,13 +191,13 @@
                             <span class="image-bottom"></span>
                         </a>
                     </li>
-                    <li>
+                    <li id="gallery-programming">
                         <!-- プログラミング学習 -->
-                        <a href="programming.html">
+                        <!-- <a href="programming.html"> -->
                             <p>プログラミング学習</p>
                             <img src="images/pan_anko_donut.png" alt="">
                             <span class="image-bottom"></span>
-                        </a>
+                        <!-- </a> -->
                     </li>
                     <li>
                         <!-- 現在工事中 -->
