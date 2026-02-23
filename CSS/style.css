@@ -805,4 +805,15 @@ main{
         width: 100%;
         font-size: 2rem;
     }
+
+    /* programming */
+    #programming-images {
+        width: 80%;
+        float: unset;
+        margin: 0 auto;
+    }
+
+    #programming-text {
+        font-size: 1.2rem;
+    }
 }
