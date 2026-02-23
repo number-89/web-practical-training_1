@@ -753,4 +753,31 @@ main{
         width: 80%;
         height: 30vw;
     }
+
+    /* favorite */
+    #favorite{
+        height: 70vh;
+    }
+
+    #carousel{
+        height: 100%;
+    }
+
+    #carousel-content{
+        flex-direction: column;
+    }
+
+    #carousel-img{
+        width: 60vw;
+        height: 60vw;
+        margin: 1rem auto;
+    }
+
+    #carousel-text-list{
+        width: 60vw;
+        height: 30vw;
+        margin: 0;
+        left: calc((100% - 60vw) / 2);
+        top: 65vw;
+    }
 }
