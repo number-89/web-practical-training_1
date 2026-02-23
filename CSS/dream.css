@@ -281,3 +281,16 @@ main{
     transition-delay: .2s;
     transition-duration: .3s;
 }
+
+@media(max-width:768px){
+    /* index */
+    #gallery-image-list{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #gallery-image-list li{
+        width: 80%;
+        height: 30vw;
+    }
+
+}
