@@ -7,17 +7,18 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/dream.css">
 
     <!-- JavaScript -->
     <script src="JavaScript/script.js" defer></script>
+    <script src="JavaScript/pg_modal.js" defer></script>
 
     <!-- GoogleFont -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
 
-    <title>工事中</title>
+    <title>トップページ</title>
 </head>
 <body class="zen-kurenaido-regular">
     <header>
@@ -58,17 +59,109 @@
             </li>
             <li>
                 <a href="mailto:M2520038@ngo.ohara.ac.jp">
-                    お問い合わせ<br>
-                    <small>(メールが開きます)</small>
+                        お問い合わせ<br>
+                        <small>(メールが開きます)</small>
                 </a>
             </li>
         </ul>
     </div>
 
+
+        <!-- programming用モーダルウィンドウ -->
+        <div id="PG-modal" class="close-PG-modal">
+            <!-- 画面が暗くなる -->
+            <div id="modal-blackout"></div>
+
+            <!-- 中身 -->
+            <div id="modal-content" class="wrapper">
+                <!-- 画像 -->
+                <div id="programming-images">
+                    <img src="images/RankS_250.png" alt="Sの画像">
+                    <p class="alternative">
+                        <a href="https://paiza.jp/mypage">paiza</a> Rank S(MAX Rate 1740)
+                    </p>
+                </div>
+
+                <!-- テキスト -->
+                <p id="programming-text">
+                    ゲームが作りたくてプログラミングを始めたが、今ではプログラミングをすることが目的になってゲームへの興味が薄れてしまった。
+                    モノ作りが好きで、何かを作り始めると止まらない。分からない事があったら先生に聞いたりAIを活用していたが、
+                    最近はAIに答えを聞くと負けた気がするので、使うときは自分で問題を解決した後にしてしまう。本当に時間の無駄だと思う。
+                </p>
+
+                <!-- モーダルウィンドウを閉じるX -->
+                <div id="close-modal-btn">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    
     <main id="main">
+        <img id="top-image" src="images/scooters_nonum.jpg" alt="それっぽい画像">
 
+        <!-- gallery -->
+        <section id="gallery" class="wrapper section">
+            <h1 class="section-title">
+                それっぽいタイトルテキスト
+            </h1>
+            <div id="gallery-images">
+                <ul id="gallery-image-list">
+                    <li>
+                        <!-- 趣味 -->
+                        <a href="favorite.html">
+                            <p>趣味</p>
+                            <img src="images/scooters_nonum_small.jpg" alt="">
+                            <span class="image-bottom"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <!-- 保有資格 -->
+                        <a href="qualification.html">
+                            <p>保有資格</p>
+                            <img src="images/sweets_daifuku_ichigo_shiroan.png" alt="">
+                            <span class="image-bottom"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <!-- 特技 -->
+                        <a href="special_skill.html">
+                            <p>特技</p>
+                            <img src="images/sweets_fruit_mitsumame.png" alt="">
+                            <span class="image-bottom"></span>
+                        </a>
+                    </li>
+                    <li id="gallery-programming">
+                        <!-- プログラミング学習 -->
+                        <!-- <a href="programming.html"> -->
+                            <p>プログラミング学習</p>
+                            <img src="images/pan_anko_donut.png" alt="">
+                            <span class="image-bottom"></span>
+                        <!-- </a> -->
+                    </li>
+                    <li>
+                        <!-- 現在工事中 -->
+                        <a href="dream.html">
+                            <p>現在工事中</p>
+                            <img src="images/sweets_jelly_cup.png" alt="">
+                            <span class="image-bottom"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <!-- お問い合わせ -->
+                        <a href="mailto:M2520038@ngo.ohara.ac.jp">
+                            <p>
+                                お問い合わせ<br>
+                                <small>(メールが開きます)</small>
+                            </p>
+                            <img src="images/sweets_goheimochi.png" alt="">
+                            <span class="image-bottom"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
     </main>
-
     <footer>
         <p>&copy;2026 number-89</p>
     </footer>
