@@ -791,4 +791,18 @@ main{
         border-top: 1px solid lightgray;
         top: auto;
     }
+
+    #special-skill-texts{
+        flex-direction: column;
+    }
+
+    #special-skill-texts img{
+        float: unset;
+        width: 100%;
+    }
+
+    #special-skill-texts p{
+        width: 100%;
+        font-size: 2rem;
+    }
 }
