@@ -740,3 +740,17 @@ main{
     padding: clamp(.1rem, .5vw, 5rem) clamp(.1rem, .25vw, 5rem);
     margin-left: 1rem;
 }
+
+
+/* レスポンシブ */
+@media (max-width: 768px){
+    /* index */
+    #gallery-image-list{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #gallery-image-list li{
+        width: 80%;
+        height: 30vw;
+    }
+}
