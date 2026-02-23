@@ -511,6 +511,38 @@ footer{
     font-size: clamp(.1rem, 3vw, 20rem);
 }
 
+/* ----------programming---------- */
+#programming-content{
+    display: flex;
+    /* background-color: blue; */
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin: 5rem 0;
+}
+
+#programming-images{
+    padding: 2rem;
+    text-align: center;
+}
+.alternative{
+    font-size: small;
+}
+
+.alternative a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.alternative a:hover{
+    text-decoration: underline;
+}
+
+#programming-text{
+    padding-top: 2rem;
+    padding-right: 5rem;
+}
+
 /* ----------qualification---------- */
 #qualification-main{
     width: 100%;
