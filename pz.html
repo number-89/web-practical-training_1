@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="preload" href="CSS/style.css" as="style"> -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="CSS/pz.css">
+    <script src="JavaScript/pz.js" defer></script>
+    <title>ナンバーパズル</title>
+</head>
+<body>
+    <header class="zen-kurenaido-regular">
+        <div id="header" class="wrapper">
+            <!-- ロゴを光らせる -->
+            <a id="header-logo" href="index.html">
+                <div id="logo-shine"></div>
+                <p>@Pull</p>
+            </a>
+        </div>
+    </header>
+    <!-- ロード -->
+    <div class="load-background"></div>
+    
+    <!-- ハンバーガー -->
+    <div class="menu" id="close-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+    <!-- ハンバーガーメニューを開いたとき画面を暗転させる -->
+    <div id="blackout">
+        <div id="blackout-background"></div>
+        <ul>
+            <li>
+                <a href="index.html">HOME</a>
+            </li>
+            <li>
+                <a href="favorite.html">趣味</a>
+            </li>
+            <li>
+                <a href="qualification.html">保有資格</a>
+            </li>
+            <li>
+                <a href="special_skill.html">特技</a>
+            </li>
+            <li>
+                <a href="pz.html">パズル</a>
+            </li>
+            <li>
+                <a href="dream.html">現在工事中</a>
+            </li>
+            <li>
+                <a href="mailto:M2520038@ngo.ohara.ac.jp">
+                    お問い合わせ<br>
+                    <small>(メールが開きます)</small>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="wrapper">
+        <!-- スコア -->
+        <div id="play-score">
+            <div id="timer-text">
+                <p>経過時間</p>
+                <div class="score-bottom">
+                    <h1 id="time-count">00:00</h1>
+                </div>
+            </div>
+            <div id="click-count">
+                <p>入れ替え回数</p>
+                <div class="score-bottom">
+                    <h1 id="swap-count">0</h1>
+                    <p>回</p>
+                </div>
+            </div>
+        </div>
+        <main>
+            <table id="puzzle-table" border="1">
+                <!-- JavaScriptでマップを作成 -->
+            </table>
+    
+            <!-- スタートボタンを作成 -->
+            <button id="start-btn" type="button">スタート</button>
+            <!-- デバッグ用ボタン -->
+            <!-- <br><button id="debug-btn" class="invisible" type="button">debug</button> -->
+        </main>
+    </div>
+    <footer>
+        <p>&copy;2026 number-89</p>
+    </footer>
+</body>
+</html>

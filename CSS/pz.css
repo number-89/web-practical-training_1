@@ -1,0 +1,252 @@
+@charset "utf-8";
+/* ----------全体---------- */
+.zen-kurenaido-regular {
+    font-family: "Zen Kurenaido", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.wrapper{
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.load-background{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 999;
+    transition: all .5s;
+}
+
+/* ----------header---------- */
+header{
+    position: relative;
+    border-bottom: 1px solid lightgray;
+    width: 100%;
+    background-color: white;
+    z-index: 50;
+    top: 0;
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.2rem;
+    width: 100%;
+    font-size: 2rem;
+}
+
+#header-logo{
+    text-decoration: none;
+    color: black;
+    position: relative;
+    user-select: none;
+    transition: all .5s;
+}
+
+#header-logo:hover{
+    transition: all 1s;
+    letter-spacing: .1em;
+}
+
+/* ボタンを光らせる */
+#logo-shine{
+    content: "";
+    position: fixed;
+
+    background-color: white;
+    width: 0rem;
+    height: 3rem;
+    overflow: hidden;
+    opacity: .5;
+}
+
+#header-logo:hover #logo-shine{
+    transition: all 1.5s;
+    width: 6rem;
+    background-color: black;
+    opacity: 0;
+}
+
+/* ----------footer---------- */
+/* 普通のfooter */
+footer{
+    padding: 1rem;
+    background-color: gray;
+    text-align: center;
+    width: 100%;
+}
+
+/* 固定footer */
+.bottom-footer{
+    position: absolute;
+    bottom: 0;
+}
+
+/* ----------ハンバーガーメニュー---------- */
+/* 共通 */
+.menu{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    right: 1rem;
+    margin-top: .5rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    transition: all .5s;
+    z-index: 550;
+    border-radius: 50%;
+    top: 0;
+}
+
+.menu span{
+    background-color: black;
+    margin: auto auto;
+    width: 2rem;
+    height: 2px;
+    transition: all .5s;
+    border-radius: 9999px;
+}
+
+.menu:hover{
+    cursor: pointer;
+    background-color: lightgray;
+    border-radius: 5%;
+}
+
+#blackout{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    visibility: hidden;
+    z-index: 500;
+}
+
+#blackout-background{
+    position: absolute;
+    background-color: black;
+    opacity: .8;
+    height: 100%;
+    width: 100%;
+}
+
+#blackout ul{
+    position: absolute;
+    list-style: none;
+}
+
+#blackout li{
+    margin: .75rem 1.5rem;
+}
+
+#blackout a{
+    color: white;
+    text-decoration: none;
+    user-select: none;
+    border-radius: 5px;
+    padding: 0 .25rem;
+}
+
+#blackout a:hover{
+    color: white;
+    background-color: transparent;
+}
+
+/* 開いているとき */
+#open-menu span:nth-child(1){
+    rotate: 45deg;
+    translate: 0 10.5px;
+}
+#open-menu span:nth-child(2){
+    opacity: 0;
+    margin: 0;
+}
+#open-menu span:nth-child(3){
+    rotate: -45deg;
+    translate: 0 -10.5px;
+}
+
+
+/* ----------all---------- */
+button{
+    min-width: 10%;
+    margin-top:1rem;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5%;
+    background-color: white;
+}
+
+button:hover{
+    background-color: rgb(247, 247, 247);
+}
+
+.wrapper{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.backgroundBlack{
+    background-color: black;
+}
+/* ----------main---------- */
+main{
+    text-align: center;
+    position: relative;
+    z-index: 0;
+    height: 100vh;
+}
+
+#puzzle-table{
+    border-collapse: collapse;
+    margin: 1rem auto 0;
+    width: 45%;
+    /* 縦横比を1:1に固定 */
+    aspect-ratio: 1 / 1;
+}
+
+#puzzle-table td{
+    user-select: none; /*文字を選択できないようにする*/
+    background-color: white;
+    width: 20%;
+    height: 20%;
+}
+#puzzle-table td:hover{
+    background-color: rgb(255, 237, 237);
+}
+/* ----------startボタン---------- */
+
+
+/* ----------score---------- */
+#play-score{
+    position: fixed;
+    z-index: 100;
+    right: 10px;
+    width: 30%;
+}
+
+#click-count,
+#timer-text{
+    text-align: right;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.score-bottom{
+    justify-content: right;
+    align-items: baseline;
+    display: flex;
+    gap: 1rem;
+}
+
+/* ----------debug---------- */
+.invisible{
+    /* visibility: hidden; */
+    display: none;
+}
