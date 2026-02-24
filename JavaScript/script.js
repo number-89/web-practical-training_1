@@ -1,6 +1,14 @@
 // ----------all----------
 let windowY = 0;
 
+// load
+const loadBackground = document.querySelector(".load-background");
+window.addEventListener("load",() => {
+    loadBackground.style.opacity = 0;
+    loadBackground.style.visibility = "hidden";
+})
+
+
 // ----------ヘッダー----------
 // windowが隠れているか
 let isHeaderHidden = false;

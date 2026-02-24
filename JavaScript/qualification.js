@@ -4,6 +4,14 @@ window.addEventListener("scroll", () => {
     // (ウィンドウがリサイズされたときの挙動を受け取れないため)
     sideWindowWidth = sideWindow.clientWidth;
 })
+
+// load
+const loadBackground = document.querySelector(".load-background");
+window.addEventListener("load",() => {
+    loadBackground.style.opacity = 0;
+    loadBackground.style.visibility = "hidden";
+})
+
 // ----------ハンバーガーメニュー----------
 const menu = document.querySelector(".menu");
 const menuSpan = document.querySelectorAll(".menu span");

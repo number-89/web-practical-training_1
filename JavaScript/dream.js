@@ -1,3 +1,10 @@
+// load
+const loadBackground = document.querySelector(".load-background");
+window.addEventListener("load",() => {
+    loadBackground.style.opacity = 0;
+    loadBackground.style.visibility = "hidden";
+})
+
 // ----------ハンバーガーメニュー----------
 const menu = document.querySelector(".menu");
 const menuSpan = document.querySelectorAll(".menu span");
